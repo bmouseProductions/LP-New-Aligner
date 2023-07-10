@@ -44,7 +44,7 @@ export default function SectionAcademy(){
                     
                 </div>
 
-                <div className='flex items-center max-w-[50%] mx-auto mb-10 '>
+                <div className='flex items-center  mx-auto mb-10 '>
                     <img src={aligner} alt="" className='w-full max-w-xl ' />
                 </div>
             </div>
