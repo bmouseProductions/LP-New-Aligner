@@ -70,19 +70,19 @@ const rows = [
   ),
   createData(
     <p className='text-xl font-semibold'>{title2}</p>, 
-    <></>, 
-    <></>, 
+    <></>,
+    <></>,
     <></>
   ),
   createData(
-    'Facilmente removível para refeições', 
-    <Checked className='!fill-[#0c47c2]' />, 
-    <NoChecked className='!fill-red-600 opacity-30' />, 
+    'Facilmente removível para refeições',
+    <Checked className='!fill-[#0c47c2]' />,
+    <NoChecked className='!fill-red-600 opacity-30' />,
     <NoChecked className='!fill-red-600 opacity-30' />
   ),
   createData(
-    'Sem consultas de emergência para bráquetes e fios danificados', 
-    <Checked className='!fill-[#0c47c2]' />, 
+    'Sem consultas de emergência para bráquetes e fios danificados',
+    <Checked className='!fill-[#0c47c2]' />,
     <NoChecked className='!fill-red-600 opacity-30' />, <NoChecked className='!fill-red-600 opacity-30' />
   ),
   createData(

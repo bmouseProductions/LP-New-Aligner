@@ -10,9 +10,9 @@ export default function SectionBanner() {
                 <div className='w-full mt-5 md:mt-10 px-5 md:px-0 flex flex-col items-center md:w-[60%] max-w-[600px] md:justify-center'>
                     <div className='w-full flex flex-col'>
                         <img src={logo} alt="" />
-                        <span className='w-full text-[20px] font-normal text-center  text-white border-[2px] rounded-xl'>Seja um parceiro Zoomies!</span>
+                        <span className='w-full text-[20px] font-normal text-center  text-white border-[2px] rounded-xl'>Seja um credenciado New Aligner</span>
                     </div>
-                    <h2 className='mt-4 font-semibold text-white text-center md:text-start mb-10 md:text-[30px]'>Obtenha um lucro bruto de até 70% revendendo produtos Zoomies!</h2>
+                    <h2 className='mt-4 font-semibold text-white text-center md:text-start mb-10 md:text-[30px]'>Você pode ganhar até 5 vezes mais com o New Aligner.</h2>
                     <Botao>
                         Quero me credenciar
                     </Botao>
