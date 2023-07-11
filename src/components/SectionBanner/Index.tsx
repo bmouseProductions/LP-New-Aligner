@@ -12,7 +12,7 @@ export default function SectionBanner() {
                         <img src={logo} alt="" />
                         <span className='w-full text-[20px] font-normal text-center mt-4 text-white border-[2px] rounded-xl'>Seja um credenciado New Aligner</span>
                     </div>
-                    <h2 className='mt-4 font-semibold text-white text-center md:text-start mb-10 md:text-[30px]'>Você pode ganhar até 5 vezes mais com o New Aligner.</h2>
+                    <h2 className='mt-4 mb-10 text-2xl xl:text-3xl font-semibold text-white text-center  '>Você pode ganhar até 5 vezes mais com o New Aligner.</h2>
                     <Botao>
                         Quero me credenciar
                     </Botao>
