@@ -20,7 +20,7 @@ export default function Acordion( {id, title, text, style}:PropsAcordion ) {
                     aria-controls={id}
                     id={id}
                 >
-                    <Typography className='font-bold'> {title} </Typography>
+                    <Typography className='font-bold'><p className='font-bold'>{title}</p>  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
