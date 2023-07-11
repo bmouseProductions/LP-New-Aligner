@@ -23,17 +23,21 @@ html{
   transition-duration: 150ms;
 }
 
+.video{
+  box-shadow: 0px 0px 20px #00b1ff !important;
+}
+
 @media only screen and  (min-width: 1024px) {
   .video{
     max-width: 36rem;
     z-index: 1;
     position: relative;
-    box-shadow: 0px 0px 20px #00b1ff;
+    box-shadow: 0px 0px 20px #00b1ff !important;
   }
 }
 
 
-/*SWIPER CONFIG*/
+/*SWIPER CONFIG
 .swiper-slide{
   width: 100%;
   height: 100%;
@@ -56,11 +60,10 @@ html{
 
 /*TEXTO GRADIENTE*/
 .text-gradient {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,#def9fa .89%,#bef3f5 17.23%,#9dedf0 42.04%,#7de7eb 55.12%,#5ed2d6 71.54%,#0dd0ee 100%);
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,#def9fa .89%,#8bebee 17.23%,#7de9ed 42.04%,#7de7eb 55.12%,#5ed2d6 71.54%,#0dd0ee 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 /*IMAGEM BACKGROUND*/
@@ -68,4 +71,18 @@ html{
   background-image: url('./assets/1.webp');
   background-position: center center;
   background-size: cover;
+}
+
+.bg-img-patriot{
+  background-image: url('./assets/patriot.webp');
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/*setas navegação slider */
+@media (max-width:768px){
+  .slick-prev, .slick-next{
+    display: none !important;
+  }
 }

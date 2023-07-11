@@ -1,45 +1,53 @@
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "react-slick";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Import modules
-import { Autoplay, Pagination, Navigation } from "swiper";
-
-
-interface SliderProps{
-    slideContent: Array<string | JSX.Element>;
-    slideCount: number;
+interface SliderProps {
+  slideContent: Array<string | JSX.Element>;
+  slideCount: number;
 }
 
-export default function Slider({ slideContent, slideCount }:SliderProps) {
-    return(
-        <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-            }}
-            pagination={{
-            clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper w-[90%] lg:w-1/2 h-[300px] rounded"
-        >
-            {slideContent.map((content, index:number) => (
-                <SwiperSlide key={index} className='w-full h-full flex justify-center items-center bg-green-500'>
-                    {content}
-                </SwiperSlide>
+export default function SliderComponent({slideContent}: SliderProps) {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+            },
+        ]
+      };
+
+  return (
+        <Slider {...settings} className="w-full m-auto relative max-w-[990px]">
+            {slideContent.map((slide, index) => (
+                <div key={index} >
+                    {slide}
+                </div>
             ))}
-        </Swiper>
-    )
+          
+        </Slider>
+  );
 }
+
+
 
 
 /* arrays que precisma estar na pagina onde o swiper vai ser chamado contendo o conteudo dos sliders
@@ -58,4 +66,20 @@ o coponente será chamado assim:
     slideContent= {slideContent}
     slideCount= {slideCount}
 />
-*/
+*//*
+<Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            pagination={{
+            clickable: true,
+            }}
+            navigation={true}
+            modules={[ Pagination, Navigation]}
+            className="mySwiper rounded"
+        >
+            {slideContent.map((content, index:number) => (
+                <SwiperSlide key={index} className='w-full h-full flex justify-center items-center px-5'>
+                    {content}
+                </SwiperSlide>
+            ))}
+        </Swiper>*/

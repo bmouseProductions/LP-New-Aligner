@@ -6,6 +6,10 @@ import SectionOqueE from "./components/SectionOqueE/Index"
 import SectionTornarCredenciado from "./components/SectionCredenciado/Index"
 import SectionDireito from "./components/SectionDireito/Index"
 import SectionAcademy from "./components/SectionAcademy/Index"
+import SectionTable from "./components/SectionTable/Index"
+import SectionSlide from "./components/SectionSlider/Index"
+import SectionForm from "./components/SectionForm/Index"
+import Whatsapp from "./components/buttonWhatsapp/Index"
 
 
 
@@ -19,6 +23,10 @@ function App() {
         <SectionTornarCredenciado />
         <SectionDireito />
         <SectionAcademy />
+        <SectionTable />
+        <SectionSlide />
+        <SectionForm />
+        <Whatsapp />
         <BackTop />
       </main>
 

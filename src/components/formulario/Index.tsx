@@ -41,32 +41,32 @@ export const Formulario = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} method="post" className="flex flex-col">
-      <label htmlFor="nome">Nome:</label>
+    <form onSubmit={handleSubmit} method="post" className="w-full sm:w-auto flex flex-col">
+      <label className="font-bold" htmlFor="nome">Nome:</label>
       <input
         type="text"
         id="nome"
         name="nome"
         onChange={handleChange}
-        className="mb-5 h-[50px] md:w-[600px] rounded text-black px-2"
+        className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
-      <label htmlFor="email">Email:</label>
+      <label className="font-bold" htmlFor="email">Email:</label>
       <input
         type="text"
         id="email"
         name="email"
         onChange={handleChange}
-        className="mb-5 h-[50px] md:w-[600px] rounded text-black px-2"
+        className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
-      <label htmlFor="telefone">Telefone:</label>
+      <label className="font-bold" htmlFor="telefone">Telefone:</label>
       <input
         type="text"
         id="telefone"
         name="telefone"
         onChange={handleChange}
-        className="mb-5 h-[50px] md:w-[600px] rounded text-black px-2"
+        className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
       <Button
@@ -74,9 +74,11 @@ export const Formulario = () => {
         variant="contained"
         id="styleButton"
         endIcon={<SendIcon />}
+        className="max-w-[600px]"
       >
-        Enviar
+        Eu quero me credenciar
       </Button>
+      
     </form>
   );
 };

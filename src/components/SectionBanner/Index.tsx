@@ -1,4 +1,4 @@
-import banner from '../../assets/banner.webp'
+import banner from '../../assets/banner2.webp'
 import logo from '../../assets/logo.svg'
 import Botao from '../button/Index'
 

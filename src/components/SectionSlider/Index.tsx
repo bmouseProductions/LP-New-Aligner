@@ -1,24 +1,30 @@
 
-import Slider from "../swiper/Index";
+import SliderComponent from "../swiper/Index";
 
-import tessmann from '../../assets/tiago-tessmann.png'
 
 
 export default function SectionSlide(){
     const slideContent = [
-        'Texto do Slide 1', 
-        'Texto do Slide 2', 
-        'Texto do Slide 3', 
-        <img key={1} src={tessmann} alt="imagem tiago tessmann" className="w-auto h-[300px]"/>
+        <iframe className="w-[250px] h-[450px] xl:w-[300px] xl:h-[550px] m-auto  rounded-xl" src="https://youtube.com/embed/sJlabUUzBoo" title="Vídeo depoimento de Paciente New Aligner" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}/>,
+        <iframe className="w-[250px] h-[450px] xl:w-[300px] xl:h-[550px] m-auto  rounded-xl" src="https://youtube.com/embed/CxqBunNfxL0" title="Vídeo depoimento de Paciente New Aligner" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}/>,
+        <iframe className="w-[250px] h-[450px] xl:w-[300px] xl:h-[550px] m-auto  rounded-xl" src="https://youtube.com/embed/azEXTT2LglA" title="Vídeo depoimento de Paciente New Aligner" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}/>,
+        <iframe className="w-[250px] h-[450px] xl:w-[300px] xl:h-[550px] m-auto  rounded-xl" src="https://youtube.com/embed/CRU98Hhi1Kg" title="Vídeo depoimento de Paciente New Aligner" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}/>,
     ];
         
     const slideCount = slideContent.length;
     return (
-        <section>
-            <Slider
-                slideContent= {slideContent}
-                slideCount= {slideCount}
-            />
+        <section className="w-full pt-5 pb-10 md:pb-14 md:pt-7 xl:py-20 px-5 md:px-[0%] lg:px-[95px] box-border">
+            <div className="flex flex-col items-center mb-7">
+                <span className="text-xl md:text-2xl font-semibold">Veja a opinião de</span>
+                <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-4 text-center">Nossos Credenciados e seus Pacientes</h1>
+            </div>
+            <div className="w-full md:px-[50px]">
+                <SliderComponent
+                    slideContent= {slideContent}
+                    slideCount= {slideCount}
+                />
+            </div>
+            
         </section>
     )
 }
