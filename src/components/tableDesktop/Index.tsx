@@ -118,7 +118,7 @@ const rows = [
 ];
 
 
-export default function BasicTable() {
+export default function TableDesktop() {
   return (
     <TableContainer component={Paper} className='max-w-[750px] lg:max-w-[1000px]  2xl:max-w-[1260px] m-auto !bg-[#e8e8e8] video'>
       <div className='!bg-[#e8e8e8] h-full w-full'>
