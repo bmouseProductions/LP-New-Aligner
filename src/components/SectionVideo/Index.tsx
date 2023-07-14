@@ -2,10 +2,10 @@
 
 export default function SectionVideo() {
     return (
-        <section className="w-full mt-5 py-10 md:py-14 xl:py-20 px-5 md:px-[5%] flex flex-col lg:flex-row lg:gap-4 xl:gap-16 items-center">
-            <div className="w-full lg:w-1/2 flex justify-center 2xl:justify-end box-border">
+        <section className="w-full mt-5 py-10 md:py-14 xl:py-20 px-5 md:px-[5%] flex flex-col lg:flex-row lg:gap-4 xl:gap-16 items-center" data-aos="fade-up" data-aos-duration="1500">
+            <div className="w-full lg:w-1/2 flex justify-center 2xl:justify-end box-border" >
                 <div className="lg:max-w-[600px] ">
-                    <h1 className="text-4xl font-bold text-gradient mb-4">
+                    <h1 className="min-h-[165px] sm:min-h-[0px] md:min-h-[85px] xl:min-h-[90px] text-4xl font-bold text-gradient mb-4">
                         Ser um credenciado é ser New Aligner Expert!
                     </h1>
 
@@ -30,7 +30,7 @@ export default function SectionVideo() {
                 <h1 className="max-w-[570px] text-3xl font-bold mb-8 text-center">
                         Ortodontia Digital não é futuro, é PRESENTE.
                 </h1>
-                <div className="w-full lg:min-h-350px] flex justify-center items-center video ">
+                <div className="w-full lg:min-h-350px] flex justify-center items-center video " data-aos="flip-right" data-aos-duration="1500" data-aos-delay="100">
                     
                     <iframe className="w-full lg:w-[100%] h-[190px] md:h-[350px] lg:h-[235px] xl:h-[300px] " src="https://www.youtube.com/embed/CusX3r5Lgl0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>

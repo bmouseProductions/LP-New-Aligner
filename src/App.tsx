@@ -11,9 +11,11 @@ import SectionSlide from "./components/SectionSlider/Index"
 import SectionForm from "./components/SectionForm/Index"
 import Whatsapp from "./components/buttonWhatsapp/Index"
 
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  AOS.init();
   return (
     <>
       <main className="w-full bg-[#04083a] text-white">
