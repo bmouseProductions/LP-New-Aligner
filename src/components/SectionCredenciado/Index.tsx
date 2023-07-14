@@ -3,11 +3,11 @@ import Botao from '../button/Index'
 
 export default function SectionAcademy(){
     return (
-        <section className=" flex flex-col lg:flex-row items-center justify-center box-border bg-img-dark">
+        <section className=" flex flex-col lg:flex-row items-center justify-center box-border bg-img-dark" >
             <div className='w-full max-w-[1450px] xl:p-[95px] xl:flex xl:justify-around '>
 
             
-                <div className='xl:max-w-[600px] px-5 py-12 md:px-[5%] xl:px-0 xl:py-0 '>
+                <div className='xl:max-w-[600px] px-5 py-12 md:px-[5%] xl:px-0 xl:py-0 ' data-aos="zoom-out" data-aos-duration="1500">
                     <span className='text-2xl'>Entendi! E agora,</span>
                     <h1 className=" min-h-[165px] sm:min-h-[0px] md:min-h-[85px] xl:min-h-[45px] mb-5 text-4xl font-bold  text-gradient ">
                         Como faço para me tornar um credenciado New Aligner?
@@ -47,7 +47,7 @@ export default function SectionAcademy(){
                     
                 </div>
 
-                <div className='flex justify-center items-center  mx-auto mb-10 '>
+                <div className='flex justify-center items-center  mx-auto mb-10 ' data-aos="zoom-out" data-aos-duration="1500">
                     <img src={aligner} alt="" className='w-full max-w-xl ' />
                 </div>
             </div>

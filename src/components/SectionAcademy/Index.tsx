@@ -4,7 +4,7 @@ import Botao from '../button/Index'
 export default function SectionTornarCredenciado(){
     return (
         <section className=" flex flex-col lg:flex-row items-center justify-center  bg-img-dark">
-            <div className='w-full max-w-[1450px]  xl:px-[95px] lg:flex lg:flex-row-reverse xl:justify-around '>
+            <div className='w-full max-w-[1450px]  xl:px-[95px] lg:flex lg:flex-row-reverse xl:justify-around ' data-aos="zoom-out" data-aos-duration="1500">
                 <div className='px-5 py-12 md:px-[5%] xl:px-0 lg:max-w-md flex flex-col items-center'>
                     <h1 className="min-h-[165px] sm:min-h-[0px] md:min-h-[85px]  text-4xl font-bold  text-gradient mb-5">
                     O que é esse tal de New Aligner Academy?

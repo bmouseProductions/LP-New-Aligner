@@ -43,23 +43,23 @@ export default function SectionDireito(){
 
     return (
         <section className="max-w-[1400px] 2xl:max-w-[1450px] py-10 md:py-14 xl:py-20 px-5 md:px-[5%] lg:px-[95px] m-auto text-[18px]">
-            <div>
-                <h1 className="min-h-[165px] sm:min-h-[0px] md:min-h-[85px] xl:min-h-[45px] text-4xl font-bold h-auto text-gradient ">
+            <div  data-aos="fade-up" data-aos-duration="1500">
+                <h1 className="min-h-[165px] sm:min-h-[0px] md:min-h-[85px] xl:min-h-[45px] text-4xl text-center font-bold h-auto text-gradient ">
                     O que tenho direto depois de me tornar um New Aligner Expert?
                 </h1>
-                <p className="my-7">
+                <p className="my-7 text-center">
                     Ao realizar a compra do seu primeiro caso, você ganha o <strong>Kit Marketing</strong>, que tem tudo que você precisa para iniciar sua jornada. É possível também fazer o upgrade para o <strong>Kit Start</strong>. Confira o que estará disponível para você:
                 </p>
             </div>
         
             <div className="w-full  flex flex-col lg:flex-row items-center lg:items-start justify-around gap-2 lg:gap-5 ">
-                <div className="flex flex-col gap-2 lg:gap-3">
+                <div className="flex flex-col gap-2 lg:gap-3" data-aos="zoom-in-right" data-aos-duration="1500">
                     {divAcordion1.map( (accordion, index) =>
                         <Acordion key={index} id={accordion.id} title={accordion.title} text={accordion.text} style={accordion.style} />
                     )}
                 </div>
 
-                <div className="flex flex-col gap-2 lg:gap-3">
+                <div className="flex flex-col gap-2 lg:gap-3" data-aos="zoom-in-left" data-aos-duration="1500">
                     {divAcordion2.map( (accordion, index) =>
                         <Acordion key={index} id={accordion.id} title={accordion.title} text={accordion.text} style={accordion.style} />
                     )}
