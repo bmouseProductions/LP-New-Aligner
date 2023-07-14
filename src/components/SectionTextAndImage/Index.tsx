@@ -5,8 +5,7 @@ export default function SectionAcademy(){
     return (
         <section className=" flex flex-col lg:flex-row items-center justify-center box-border bg-img-dark">
             <div className='w-full max-w-[1450px] xl:p-[95px] xl:flex xl:justify-around '>
-
-            
+                
                 <div className='xl:max-w-[600px] px-5 py-12 md:px-[5%] xl:px-0 xl:py-0 '>
                     <span className='text-2xl'>Entendi! E agora,</span>
                     <h1 className=" min-h-[165px] sm:min-h-[0px] md:min-h-[85px] xl:min-h-[45px] mb-5 text-4xl font-bold  text-gradient ">
