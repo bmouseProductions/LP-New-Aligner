@@ -3,12 +3,6 @@ import Acordion from "../accordion/Index";
 export default function SectionDireito(){
 
     const divAcordion1 = [
-        {
-            id:"accordion1" ,
-            title:"Material para ponto de venda" ,
-            text:"Material PDV (ponto de venda) para a recepção da sua clínica ou consultório: display porta flyers, flyers informativos e apresentação de vendas. Disponível no Kit Marketing.",
-            style:"w-[100%] md:w-[350px] lg:w-[400px] xl:w-[500px] rounded" //syles gerais
-        },
 
         {
             id:"accordion2" ,
@@ -26,12 +20,6 @@ export default function SectionDireito(){
     ]
 
     const divAcordion2 = [
-        {
-            id:"accordion5" ,
-            title:"Macromodelo New Aligner" ,
-            text:"Objeto importante para fechar a venda. Mostre além da teoria como é, fisicamente, o New Aligner para seu paciente. Disponível apenas no Kit Start.",
-            style:"w-[100%] md:w-[350px] lg:w-[400px] xl:w-[500px] rounded" //syles gerais
-        },
 
         {
             id:"accordion7" ,

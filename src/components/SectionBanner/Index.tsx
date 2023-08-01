@@ -1,5 +1,5 @@
 import banner from '../../assets/banner2.webp'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo-newaligner.svg'
 import Botao from '../button/Index'
 
 export default function SectionBanner() {
