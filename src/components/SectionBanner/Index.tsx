@@ -1,4 +1,4 @@
-import banner from '../../assets/banner2.webp'
+import banner from '../../assets/banner6.webp'
 import logo from '../../assets/logo-newaligner.svg'
 import Botao from '../button/Index'
 
