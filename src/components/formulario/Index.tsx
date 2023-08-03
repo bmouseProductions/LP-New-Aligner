@@ -18,7 +18,7 @@ export const Formulario = () => {
     email: "",
   });
 
-
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -34,20 +34,25 @@ export const Formulario = () => {
     e.preventDefault();
 
     try {
+      setIsSending(true)
       await enviarEmail(formData);
     } catch (error) {
       console.error("Something is wrong", error);
+    } finally{
+      setIsSending(false)
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} method="post" className="w-full sm:w-auto flex flex-col">
+    <form onSubmit={handleSubmit}  className="w-full sm:w-auto flex flex-col">
       <label className="font-bold" htmlFor="nome">Nome:</label>
       <input
         type="text"
         id="nome"
         name="nome"
         onChange={handleChange}
+        value={formData.nome}
+        required
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
@@ -57,6 +62,8 @@ export const Formulario = () => {
         id="email"
         name="email"
         onChange={handleChange}
+        value={formData.email}
+        required
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
@@ -66,6 +73,8 @@ export const Formulario = () => {
         id="telefone"
         name="telefone"
         onChange={handleChange}
+        value={formData.telefone}
+        required
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
@@ -75,6 +84,7 @@ export const Formulario = () => {
         id="styleButton"
         endIcon={<SendIcon />}
         className="max-w-[600px]"
+        disabled={isSending}
       >
         Eu quero me credenciar
       </Button>
