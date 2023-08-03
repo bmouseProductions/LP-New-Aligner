@@ -1,10 +1,10 @@
-import banner from '../../assets/banner6.webp'
-import logo from '../../assets/logo-newaligner.svg'
+import banner from '/banner6.webp'
+import logo from '/logo-newaligner.svg'
 import Botao from '../button/Index'
 
 export default function SectionBanner() {
     return(
-        <section className="w-full h-[100vh] !max-h-[900px] pt-[40px] md:px-[5%] bg-gradient-to-b lg:bg-[radial-gradient(ellipse_at_top_center,_var(--tw-gradient-stops))] from-[#326ef5] md:from-30% to-[#04083a] md:to-70%">
+        <section className="w-full h-full pt-[40px] md:px-[5%] bg-gradient-to-b lg:bg-[radial-gradient(ellipse_at_top_center,_var(--tw-gradient-stops))] from-[#326ef5] md:from-30% to-[#04083a] md:to-70%">
             <div className='flex flex-col lg:flex-row-reverse md:justify-center md:items-center'>
                 <img src={banner} alt="banner divulgação new aligner" className='w-auto  md:max-w-full lg:max-w-[550px] xl:max-w-[700px] ' data-aos="fade-left" data-aos-duration="1500"/>
                 <div className='w-full mt-5 md:mt-10 px-5 md:px-0 flex flex-col items-center md:w-[60%] max-w-[600px] md:justify-center' data-aos="fade-right" data-aos-duration="1500">

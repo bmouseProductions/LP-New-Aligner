@@ -1,4 +1,4 @@
-import aligner from '../../assets/New-Aligner.png'
+import aligner from '/New-Aligner.png'
 import Botao from '../button/Index'
 
 export default function SectionAcademy(){

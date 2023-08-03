@@ -73,13 +73,13 @@ html, body{
 
 /*IMAGEM BACKGROUND*/
 .bg-img-dark{
-  background-image: url('./assets/1.webp');
+  background-image: url('/1.webp');
   background-position: center center;
   background-size: cover;
 }
 
 .bg-img-patriot{
-  background-image: url('./assets/patriot.webp');
+  background-image: url('/patriot.webp');
   background-position: center center;
   background-size: cover;
 }

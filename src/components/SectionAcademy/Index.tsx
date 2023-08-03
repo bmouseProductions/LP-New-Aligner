@@ -1,4 +1,4 @@
-import dra from '../../assets/3.png'
+import dra from '/3.png'
 import Botao from '../button/Index'
 
 export default function SectionTornarCredenciado(){

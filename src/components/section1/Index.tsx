@@ -1,5 +1,5 @@
 
-import tessmann from '../../assets/tiago-tessmann.png'
+import tessmann from '/tiago-tessmann.png'
 import Botao from '../button/Index'
 
 export default function Section1() {

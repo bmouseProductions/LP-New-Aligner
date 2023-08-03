@@ -2,7 +2,7 @@ import Acordion from "../accordion/Index";
 import { Formulario } from "../formulario/Index";
 import Slider from "../swiper/Index";
 
-import tessmann from '../../assets/tiago-tessmann.png'
+import tessmann from '/tiago-tessmann.png'
 
 
 export default function Section2() {
