@@ -10,17 +10,19 @@ interface propsFormData {
     email: string;
 }
 
-export const enviarEmail = async (formData:propsFormData) => {
-    const {nome, telefone, email} = formData
+export const enviarEmail = async (formData: propsFormData) => {
+    const {nome, telefone, email} = formData;
 
-    const formDataToSend = new FormData();
-    formDataToSend.append("nome", nome);
-    formDataToSend.append("telefone", telefone);
-    formDataToSend.append("email", email);
-
-
-    return await api.post("/send", formDataToSend, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+    const dataToSend = {
+        nome,
+        telefone,
+        email
+    }
+    try{
+        const response = await api.post("/send", dataToSend)
+        return response.data
+    } catch (error: any) {
+        throw new Error("Erro" + error.message)
+    }
 
 }
