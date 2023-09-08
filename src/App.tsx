@@ -28,7 +28,6 @@ function App() {
         <SectionTable />
         <SectionSlide />
         <SectionForm />
-        <Whatsapp />
         <BackTop />
       </main>
 
