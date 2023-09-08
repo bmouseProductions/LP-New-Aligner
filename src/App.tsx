@@ -9,7 +9,7 @@ import SectionAcademy from "./components/SectionAcademy/Index"
 import SectionTable from "./components/SectionTable/Index"
 import SectionSlide from "./components/SectionSlider/Index"
 import SectionForm from "./components/SectionForm/Index"
-import Whatsapp from "./components/buttonWhatsapp/Index"
+//import Whatsapp from "./components/buttonWhatsapp/Index"
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
