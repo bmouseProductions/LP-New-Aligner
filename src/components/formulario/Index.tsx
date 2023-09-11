@@ -21,8 +21,6 @@ export const Formulario = () => {
 
   const [isSending, setIsSending] = useState(false);
 
-  const [captcha, setCaptcha] = useState("");
-
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
