@@ -1,8 +1,8 @@
 import { FormEvent, ChangeEvent, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { enviarEmail } from "../../api/api";
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 
 
@@ -79,8 +79,9 @@ export const Formulario = () => {
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
-      <ReCAPTCHA
-        sitekey='6LfD_hkoAAAAAIqCf337HDJyLR2Yra4qS8-TDa30'
+      <HCaptcha
+        sitekey="your-sitekey"
+        onVerify={(token,ekey) => handleVerificationSuccess(token, ekey)}
       />
 
       <Button
