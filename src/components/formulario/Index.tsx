@@ -1,4 +1,5 @@
 import { FormEvent, ChangeEvent, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { enviarEmail } from "../../api/api";
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
@@ -19,6 +20,8 @@ export const Formulario = () => {
   });
 
   const [isSending, setIsSending] = useState(false);
+
+  const [captcha, setCaptcha] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -76,6 +79,10 @@ export const Formulario = () => {
         value={formData.telefone}
         required
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
+      />
+
+      <ReCAPTCHA
+        sitekey='6LfD_hkoAAAAAIqCf337HDJyLR2Yra4qS8-TDa30'
       />
 
       <Button
