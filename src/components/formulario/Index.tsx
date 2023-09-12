@@ -1,10 +1,15 @@
-import { FormEvent, ChangeEvent, useState } from "react";
+import {
+  FormEvent,
+  ChangeEvent,
+  useState,
+  SetStateAction,
+  useEffect,
+  useRef,
+} from "react";
 import { enviarEmail } from "../../api/api";
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-
-
 
 interface FormData {
   nome: string;
@@ -19,34 +24,71 @@ export const Formulario = () => {
     email: "",
   });
 
+  const hcaptchaRef = useRef(null);
+  const [hcaptchaToken, setHcaptchaToken] = useState("");
+
+  const handleHcaptchaVerify = (token: SetStateAction<string>) => {
+    console.log("Token do hCaptcha:", token);
+    setHcaptchaToken(token);
+  };
+
   const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [id]: value
+      [id]: value,
     }));
   };
-
- 
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      setIsSending(true)
+      setIsSending(true);
       await enviarEmail(formData);
     } catch (error) {
       console.error("Something is wrong", error);
-    } finally{
-      setIsSending(false)
+    } finally {
+      setIsSending(false);
+    }
+
+    if (hcaptchaToken) {
+      try {
+        const response = await fetch("http://localhost:3000/api/vote", {
+          method: "POST",
+          body: JSON.stringify({ token: hcaptchaToken }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          console.error("Erro na resposta do servidor:", response.status);
+          return;
+        }
+
+        const data = await response.json();
+        console.log("Resposta do servidor:", data);
+      } catch (error) {
+        console.error("Erro ao enviar os dados:", error);
+      }
+    } else {
+      alert("Por favor, verifique o hCaptcha antes de enviar o formulário.");
     }
   };
+  useEffect(() => {
+    if (hcaptchaToken) {
+      // Realize ações adicionais se o token do hCaptcha estiver disponível
+    }
+  }, [hcaptchaToken]);
 
   return (
-    <form onSubmit={handleSubmit}  className="w-full sm:w-auto flex flex-col">
-      <label className="font-bold" htmlFor="nome">Nome:</label>
+    <form onSubmit={handleSubmit} className="w-full sm:w-auto flex flex-col">
+      <label className="font-bold" htmlFor="nome">
+        Nome:
+      </label>
       <input
         type="text"
         id="nome"
@@ -57,7 +99,9 @@ export const Formulario = () => {
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
-      <label className="font-bold" htmlFor="email">Email:</label>
+      <label className="font-bold" htmlFor="email">
+        Email:
+      </label>
       <input
         type="text"
         id="email"
@@ -68,7 +112,9 @@ export const Formulario = () => {
         className="mb-5 h-[50px]  md:w-[600px] lg:w-[400px] xl:w-[600px] rounded text-black px-2"
       />
 
-      <label className="font-bold" htmlFor="telefone">Telefone:</label>
+      <label className="font-bold" htmlFor="telefone">
+        Telefone:
+      </label>
       <input
         type="text"
         id="telefone"
@@ -80,8 +126,9 @@ export const Formulario = () => {
       />
 
       <HCaptcha
-        sitekey="your-sitekey"
-        onVerify={(token,ekey) => handleVerificationSuccess(token, ekey)}
+        ref={hcaptchaRef}
+        sitekey="7f7e4173-cf27-4e66-8934-028186885398"
+        onVerify={handleHcaptchaVerify}
       />
 
       <Button
@@ -89,12 +136,11 @@ export const Formulario = () => {
         variant="contained"
         id="styleButton"
         endIcon={<SendIcon />}
-        className="max-w-[600px]"
+        className="max-w-[600px] !mt-4"
         disabled={isSending}
       >
         Eu quero me credenciar
       </Button>
-      
     </form>
   );
 };
