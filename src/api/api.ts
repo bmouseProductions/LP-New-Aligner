@@ -4,7 +4,7 @@ export const api = axios.create({
     baseURL: "https://backend-new-aligner.onrender.com"
 })
 
-const nodeApiBaseUrl = "http://localhost:3000";
+const nodeApiBaseUrl = "https://hcaptcha-newaligner.onrender.com";
 
 interface propsFormData {
     nome: string;
