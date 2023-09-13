@@ -136,7 +136,7 @@ export const Formulario = () => {
         variant="contained"
         id="styleButton"
         endIcon={<SendIcon />}
-        className="max-w-[600px]"
+        className="max-w-[600px] !mt-4"
         disabled={isSending}
       >
         Eu quero me credenciar

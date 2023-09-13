@@ -5,7 +5,6 @@ export const api = axios.create({
 })
 
 const nodeApiBaseUrl = "https://hcaptcha-newaligner.onrender.com";
-
 interface propsFormData {
     nome: string;
     telefone: string;
